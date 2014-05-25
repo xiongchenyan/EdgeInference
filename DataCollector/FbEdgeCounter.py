@@ -49,7 +49,7 @@ class FbEdgeCounterC(cxBaseC):
     def dump(self):
         out = open(self.OutName,'w')        
         l = self.hEdge.items()
-        l.sort(lambda item: item[1],reverse = True)
+        l.sort(key=lambda item: item[1],reverse = True)
         
         for item in l:
             print >>out, item[0] + "\t%d" %(item[1])
